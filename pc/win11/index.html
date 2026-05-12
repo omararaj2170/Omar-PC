@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Windows 11 PC</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="desktop">
+    <div class="wallpaper-overlay"></div>
+
+    <main class="windows-grid" aria-label="Desktop apps">
+      <button class="app-card" data-app="chrome">🌐<span>Chrome</span></button>
+      <button class="app-card" data-app="notepad">📝<span>Notepad</span></button>
+      <button class="app-card" data-app="m365">📊<span>Microsoft 365</span></button>
+      <button class="app-card" data-app="explorer">📁<span>File Explorer</span></button>
+      <button class="app-card" data-app="store">🛍️<span>Microsoft Store</span></button>
+    </main>
+
+    <section class="window" id="appWindow" hidden>
+      <header class="window-bar">
+        <strong id="windowTitle">App</strong>
+        <button id="closeWindow" aria-label="Close window">✕</button>
+      </header>
+      <div class="window-body" id="windowBody"></div>
+    </section>
+
+    <footer class="taskbar">
+      <button class="start-button" id="startButton">⊞ Start</button>
+      <span class="clock" id="clock"></span>
+    </footer>
+
+    <aside class="start-menu" id="startMenu" hidden>
+      <h3>Pinned</h3>
+      <div class="start-apps">
+        <button class="mini-app" data-app="chrome">Chrome</button>
+        <button class="mini-app" data-app="notepad">Notepad</button>
+        <button class="mini-app" data-app="m365">Microsoft 365</button>
+        <button class="mini-app" data-app="explorer">File Explorer</button>
+        <button class="mini-app" data-app="store">Microsoft Store</button>
+      </div>
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
