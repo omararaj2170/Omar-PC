@@ -1,0 +1,45 @@
+:root {
+  --taskbar-bg: rgba(16, 20, 38, 0.78);
+  --window-bg: #10151d;
+  --window-card: #1a2432;
+  --text: #eef5ff;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 20% 20%, rgba(130,190,255,.35), transparent 40%),
+    radial-gradient(circle at 75% 25%, rgba(130,90,255,.28), transparent 45%),
+    radial-gradient(circle at 70% 75%, rgba(50,220,190,.22), transparent 40%),
+    linear-gradient(145deg, #071225, #0b2b59 45%, #355da8);
+}
+.desktop { min-height: 100vh; display: flex; flex-direction: column; padding: 1rem; gap: .9rem; position: relative; }
+.top-note { font-size: .95rem; background: rgba(0,0,0,.26); padding: .5rem .8rem; border-radius: 10px; width: fit-content; backdrop-filter: blur(6px); }
+.windows-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: .65rem; max-width: 760px; }
+.app-card { background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.25); color: #fff; border-radius: 14px; padding: .85rem .5rem; display: flex; flex-direction: column; align-items: center; gap: .4rem; cursor: pointer; backdrop-filter: blur(7px); }
+.app-card:hover,.mini-app:hover,.start-button:hover,#closeWindow:hover,#minWindow:hover{ filter: brightness(1.12); }
+.window { width: min(980px, 97vw); min-height: 360px; background: var(--window-bg); border: 1px solid #2d4460; border-radius: 16px; overflow: hidden; box-shadow: 0 18px 40px rgba(0,0,0,.45); }
+.window-bar { display: flex; justify-content: space-between; align-items: center; padding: .7rem .9rem; background: #1f2a39; }
+.window-actions { display: flex; gap: .5rem; }
+.window-body { padding: .9rem; background: var(--window-card); min-height: 300px; }
+.taskbar { margin-top: auto; display: flex; justify-content: space-between; align-items: center; background: var(--taskbar-bg); border: 1px solid rgba(255,255,255,.18); border-radius: 16px; padding: .6rem .9rem; backdrop-filter: blur(9px); }
+.taskbar-status { display: flex; gap: 1rem; font-size: .9rem; }
+.start-button,#closeWindow,#minWindow,.mini-app,.pill-btn { border: none; border-radius: 10px; padding: .45rem .75rem; cursor: pointer; background: #29538c; color: #fff; }
+.start-menu { position: absolute; bottom: 4.8rem; left: 1rem; background: #131f2f; border: 1px solid #2d4f7d; border-radius: 14px; padding: .9rem; width: 340px; }
+.start-apps { display: grid; grid-template-columns: 1fr 1fr; gap: .45rem; }
+.store-grid,.m365-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: .75rem; }
+.store-item { background: #223146; border: 1px solid #395474; border-radius: 10px; padding: .7rem; }
+.browser-controls { display: flex; gap: .5rem; margin-bottom: .6rem; }
+.browser-controls input { flex: 1; padding: .6rem; border-radius: 8px; border: 1px solid #456; }
+.browser-view { width: 100%; height: 280px; border: 1px solid #456; border-radius: 8px; background: #fff; }
+.canvas-wrap { display: flex; gap: .5rem; margin-bottom: .5rem; }
+#paintCanvas { background: #fff; border-radius: 8px; cursor: crosshair; }
+.calc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: .45rem; }
+.calc-grid button { padding: .65rem; border-radius: 8px; border: none; background: #2b527f; color: #fff; cursor: pointer; }
+#snakeBoard { display: grid; grid-template-columns: repeat(16, 16px); gap: 1px; width: max-content; background: #1f3048; padding: 5px; border-radius: 6px; }
+.snake-cell { width: 16px; height: 16px; background: #132238; }
+.snake { background: #42c26b; }
+.food { background: #ff6b6b; }
